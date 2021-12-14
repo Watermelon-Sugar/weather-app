@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(img/noaa-zuEGkXnH4y4-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 7%;
+}
+
+nav.active {
+    background-color: rgb(215, 235, 235);
+    padding: 30px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    margin-left: 42%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: width 0.5s linear;
+}
+
+nav {
+    border-radius: 5px;
+    padding: 30px;
+    height: 80px;
+    background-color: rgb(215, 235, 235);
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+nav.active img {
+    width: 0;
+    display: flex;
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: transform 0.5s linear, opacity 0.5s linear;
+}
+
+nav img {
+    width: 60px;
+    border-radius: 50%;
+    opacity: 1;
+} 
+
+nav.active ul {
+    width: 0;
+    transition: width 0.5s linear;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 50%;
+    font-size: 18px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+nav.active ul li {
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: transform 0.5s linear, opacity 0.5s linear;
+}
+
+nav ul li {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+nav ul a {
+    position: relative;
+    color: rgba(0, 0, 0, 0.582);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.icon {
+    background-color: rgb(215, 235, 235);
+    border: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+nav.active .icon {
+    padding-left: 20px;
+}
+.icon:focus {
+    outline: 0;
+}
+
+.icon .line {
+    background-color: #eb9d;
+    height: 3px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    transition: transform 0.5s linear;
+}
+
+.icon .line2 {
+    top: auto;
+    bottom: 10px;
+}
+
+nav.active .icon .line1 {
+    transform: rotate(0deg);
+}
+
+nav.active .icon .line2 {
+    transform: rotate(0deg);
+}
+
+.icon .line1 {
+    transform: rotate(-770deg) translateY(5.5px);
+}
+
+.icon .line2 {
+    transform: rotate(770deg) translateY(-5.5px);
+}
+
+main .card {
+    position: relative;
+    top: 50px;
+    background-color: #928f8f2b;
+    color: #fff;
+    width: 100%;
+}
+
+.about-me {
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.me h1 {
+    font-size: 32px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #eb9d;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.me h4 {
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.me h3 {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.number h2 {
+    font-size: 19px;
+    line-height: 28px;
+    padding-bottom: 15px;
+}
+
+.contact-btn {
+    margin-bottom: 20px;
+}
+
+.contact-me .btn {
+    text-transform: uppercase;
+    width: 80px;
+    background-color: #fff;
+    font-weight: 550;
+    margin: 0 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-me .btn a {
+    text-decoration: none;
+    color: #eb9d;
+    font-size: 15px;
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.download .btn {
+    width: 180px;
+    background-color: #fff;
+    font-weight: 550;
+    margin: 0 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.download .btn a {
+    text-decoration: none;
+    color: #eb9d;
+    font-size: 18px;
+}
+
+.image {
+    margin-top: 45px;
+}
+
+.image img {
+    border-radius: 150px;
+    width: 200px;
+}
+
+.info-footer {
+    padding-top: 15%;
+}
+
+footer {
+    background-color: rgb(215, 235, 235);
+    align-items: center;
+    border-radius: 5px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+footer img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+footer span {
+    font-size: 18px;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    margin-bottom: 0;
+}
+
+footer li {
+    list-style-type: none;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+
+@media (min-width: 1281px) {
+            
+    header {
+        padding-top: 5%;
+        padding-left: 11%;
+    }
+
+    nav.active {
+        width: 120px;
+        height: 120px;
+    }
+
+    nav {
+        width: 100%;
+        height: 120px;
+    }
+
+    nav img {
+        width: 90px;
+    }
+    nav ul {
+        position: relative;
+        left: 10%;
+        font-size: 20px;
+    }
+
+    .about-me {
+        position: relative;
+        top: 3%;
+    }
+
+    .me h1 {
+        font-size: 32px;
+        text-align: justify;
+    }
+
+    .me h4 {
+        font-size: 22px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+
+    .me h3 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .contact-btn {
+        margin-bottom: 20px;
+    }
+
+    .contact-me .btn {
+        width: 100px;
+    }
+
+    .contact-me .btn a {
+        text-decoration: none;
+        color: #eb9d;
+        font-size: 15px;
+    }
+
+    .download .btn {
+        width: 250px;
+        height: 60px;
+    }
+
+    .download .btn a {
+        font-size: 22px;
+    }
+
+    .image {
+        margin-top: 0;
+    }
+
+    .image img {
+        border-radius: 150px;
+        width: 300px;
+    }
+
+
+    .footer {
+        height: 120px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .info-footer {
+        padding-top: 6%;
+    }
+
+    footer img {
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    footer span {
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    footer ul {
+        display: flex;    
+    }
+
+    footer li {
+        list-style-type: none;
+        color: rgb(131, 124, 124);
+        margin-right: 30px;
+        font-size: 25px;
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header {
+        padding-left: 10%;
+    }
+
+    nav.active  {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        display: flex;
+    }
+
+    nav {
+        width: 800px;
+        padding: 30px;
+    }
+
+    nav img {
+        width: 60px;
+    } 
+
+    nav ul {
+        display: flex;
+        padding-left: 25px;
+        font-size: 18px;
+    }
+
+    nav.active .icon {
+        padding-left: 10px;
+    }
+
+    .about-me {
+        position: relative;
+        top: 3%;
+    }
+
+    .me h1 {
+        font-size: 32px;
+        text-align: justify;
+    }
+
+    .me h4 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .me h3 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .contact-btn {
+        margin-bottom: 20px;
+    }
+
+    .contact-me .btn {
+        width: 90px;
+    }
+
+    .contact-me .btn a {
+        font-size: 15px;
+    }
+
+    .download .btn {
+        width: 220px;
+        height: 50px;
+    }
+
+    .download .btn a {
+        font-size: 20px;
+    }
+
+    .image {
+        margin-top: 0;
+    }
+
+    .image img {
+        border-radius: 150px;
+        width: 250px;
+    }
+
+    .footer {
+        justify-content: space-evenly;
+    }
+
+    .info-footer {
+        padding-top: 10%;
+    }
+
+    footer img {
+        width: 60px;
+    }
+
+    footer span {
+        font-size: 18px;
+    }
+
+    footer ul {
+        padding-left: 0;
+    }
+
+    footer li {
+        margin-right: 15px;
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width: 425px) and (max-width: 767px) {
+
+    body {
+        height: auto;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        padding-top: 8%;
+    }
+
+    nav.active {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        margin-right: 40%;
+    }
+
+    nav {
+        width: 350px;
+        padding: 20px;
+    }
+
+    nav img {
+        width: 40px;
+    } 
+
+    nav ul {
+        display: flex;
+        padding-left: 0;
+        font-size: 10px;
+    }
+
+    nav.active .icon {
+        padding-left: 10px;
+    }
+    
+    .about-me {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .me h1 {
+        font-size: 20px;
+    }
+
+    .me h4 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .me h3 {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .contact-btn {
+        margin-bottom: 20px;
+    }
+
+    .contact-me .btn {
+        width: 80px;
+    }
+
+    .contact-me .btn a {
+        font-size: 12px;
+    }
+
+    .download .btn {
+        width: 150px;
+    }
+
+    .download .btn a {
+        font-size: 15px;
+    }
+
+    .image img {
+        border-radius: 150px;
+        width: 200px;
+    }
+
+    .info-footer {
+        padding-top: 20%;
+    }
+
+    footer img {
+        padding: 10px;
+        width: 70px;
+    }
+
+    footer span {
+        font-size: 10px;
+    }
+
+    footer ul {
+        padding-left: 0;
+    }
+
+    footer li {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+
+    body {
+        height: auto;
+    }
+
+    header {
+        padding-top: 10%;
+        padding-right: 12%;
+    }
+
+    nav.active {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        margin-right: 40%;
+    }
+
+    nav {
+        width: 300px;
+        height: 60px;
+        padding: 20px;
+    }
+
+    nav img {
+        width: 40px;
+    } 
+
+    nav ul {
+        display: block;
+        font-size: 12px;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav.active .icon {
+        padding-left: 10px;
+    }
+
+    .about-me {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .me h1 {
+        font-size: 20px;
+    }
+
+    .me h4 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .me h3 {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .contact-btn {
+        margin-bottom: 20px;
+    }
+
+    .contact-me .btn {
+        width: 80px;
+    }
+
+    .contact-me .btn a {
+        font-size: 12px;
+    }
+
+    .download .btn {
+        width: 150px;
+    }
+
+    .download .btn a {
+        font-size: 15px;
+    }
+
+    .image img {
+        border-radius: 150px;
+        width: 180px;
+    }
+
+    .info-footer {
+        padding-top: 20%;
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer img {
+        width: 40px;
+    }
+
+    footer span {
+        font-size: 12px;
+    }
+
+    footer ul {
+        padding-left: 0;
+    }
+
+    footer li {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+
+    body {
+        height: auto;
+    }
+
+    header {        
+        padding-right: 12%;
+    }
+    
+    nav.active {
+        padding: 12px 0;
+        width: 50px;
+        height: 50px;
+        display: flex;
+    }
+
+    nav {
+        width: 250px;
+        height: 50px;
+        padding: 20px;
+    }
+
+    nav img {
+        width: 40px;
+    } 
+
+    nav ul {
+        display: block;
+        font-size: 10px;
+    }
+
+    .about-me {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .me h1 {
+        font-size: 20px;
+    }
+
+    .me h4 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .me h3 {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .contact-btn {
+        margin-bottom: 20px;
+    }
+
+    .contact-me .btn {
+        width: 80px;
+    }
+
+    .contact-me .btn a {
+        font-size: 12px;
+    }
+
+    .download .btn {
+        width: 150px;
+    }
+
+    .download .btn a {
+        font-size: 15px;
+    }
+
+    .image img {
+        border-radius: 150px;
+        width: 180px;
+    }
+    
+    .info-footer {
+        padding-top: 20%;
+    }
+
+    .footer {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer img {
+        width: 40px;
+    }
+
+    footer span {
+        font-size: 12px;
+    }
+
+    footer ul {
+        padding-left: 0;
+    }
+
+    footer li {
+        margin-right: 10px;
+        font-size: 10px;
+    }
+}

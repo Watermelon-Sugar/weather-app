@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <div class="card">
+                <header class="nav-container">
+                    <nav class="active" id="nav">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/download.png" alt="logo">
+                        </a>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                        <button class="icon" id="toggle">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                        </button>
+                    </nav>
+                </header>
+
+                <div class="deets-info">
+                    <form>
+                        <input class="form-control me-2" id="search" type="search" placeholder="Type in your city" aria-label="Search" autofocus required>
+                        <button id="search-btn"><i class="bi bi-search"></i></button>
+                       
+                    </form>
+                    <div class="div">
+                        <p id="alert"></p>
+                    </div>
+                    <div id="weatherInfo">
+                        <div id="details">
+                            <div class="location"></div>
+                            <div class="date"></div>
+                        </div>
+                        <div id="forecast">
+                            <div class="temp"></div>
+                            <div class="weather"></div>
+                            <div class="humidity"></div>
+                            <div class="wind"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="info-footer">
+            <footer id="footer">
+                <div class="footer">
+                    <a href="index.html">
+                        <img src="img/download.png" alt="logo">
+                    </a>
+                    <span class="text-muted">&copy; WatermelonSugar</span>
+
+                    <ul>
+                        <li><a href="https://github.com/Watermelon-Sugar"><i class="bi bi-github" style="color: rgb(131, 124, 124);"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/oluwaseyi-popoola-389466165/"><i class="bi bi-linkedin" style="color: rgb(131, 124, 124);"></i></a></li>
+                        <li><a href="https://twitter.com/_seyitan_"><i class="bi bi-twitter" style="color: rgb(131, 124, 124);"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
