@@ -3,7 +3,7 @@ const nav = document.getElementById('nav');
 const search = document.getElementById('search');
 const searchBtn = document.getElementById('search-btn');
 const errorMes = document.getElementById('alert');
-
+const weatherInfo = document.getElementById('weatherInfo');
 
 toggle.addEventListener('click', () => nav.classList.toggle('active'));
 
@@ -27,29 +27,17 @@ function setQuery(evt) {
 
 
 const api = {
-    key: "35964f221b270dd8cdb967226e5eaa14",
-    base: "https://api.openweatahermap.org/data/2.5/forecast"
+    key: "dfd961668cc40d0df5ea51bfce7b833a",
+    base: "https://api.openweathermap.org/data/2.5/forecast"
 };
 
 const  weatherForecast = async () => {
    
-    if (search.value === "") {
-
+    if (search.value) {
         
-        errorMes.innerHTML = `<p>Input a valid city</p>`;
-
-        errorMes.style.fontSize = "20px";
-        errorMes.style.display = "flex";
-        errorMes.style.justifyContent = "center";
-        errorMes.style.paddingTop = "20px";
-        errorMes.style.alignItems = "center";
-
-            
-    } else {
-
-        
+       
         errorMes.innerHTML = "";
-
+        weatherInfo.style.display = "flex";
 
         const res = await fetch(`${api.base}?q=${search.value}&units=metric&cnt=1&appid=${api.key}`);
 
@@ -60,7 +48,19 @@ const  weatherForecast = async () => {
         console.log(data);
         
         return data;    
+
+            
+    } else {
+
+        errorMes.innerHTML = `<p>Input a valid city</p>`;
+
+        errorMes.style.fontSize = "20px";
+        errorMes.style.display = "flex";
+        errorMes.style.justifyContent = "center";
+        errorMes.style.paddingTop = "20px";
+        errorMes.style.alignItems = "center";
         
+        weatherInfo.style.display = "none";
     }
 };
 
